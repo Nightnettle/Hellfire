@@ -79,11 +79,7 @@ void __fastcall HookedDrawModelExecute(void* ecx, void* edx, SDK::IMatRenderCont
 					Interfaces::ModelRender->ForcedMaterialOverride(WireHands);
 				}
 			}
-			else {
-				SDK::IMaterial* Hands = Interfaces::MaterialSystem->FindMaterial(strModelName.c_str(), TEXTURE_GROUP_MODEL);
-				Hands->SetMaterialVarFlag(SDK::MATERIAL_VAR_WIREFRAME, false);
-			}
-		   
+			
 
 			if (entity && entity->GetIsScoped() && in_tp && entity == local_player)
 			{
